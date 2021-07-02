@@ -1,21 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WEBSITE-1</title>
     <link rel="stylesheet" href="style1.css">
+
 </head>
 <body>
     <div class="main">
         <nav>
-            <div class="logo"></div>
             <div class="logo">
-                <img src=""
-
+                <img src="https://www.logo.wine/a/logo/Xiaomi_Mi_Note/Xiaomi_Mi_Note-Logo.wine.svg" >
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
             </div>
         </nav>
+        <div class="information">
+            <div class="overlay"></div>
+            <div class="mobile">
+                <p id="clr">Redmi Note 10 Pro</p>
+                <img src="https://www.91-img.com/gallery_images_uploads/8/2/82bd72044eb280a352e290fe8a059c0ee34d9ec4.jpg?tr=h-550,w-0,c-at_max" >
+            </div>
+
+            <div id="circle">
+                <div class="feature one">
+                    <img src="https://www.iconsdb.com/icons/preview/white/webcam-4-xl.png" >
+                    <div>
+                        <h1>Camera</h1>
+                        <p>64Mp</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="https://www.iconsdb.com/icons/preview/white/processor-xxl.png" >
+                     <div>
+                        <h1>Processor</h1>
+                        <p>Qualcomm Snapdragon 732G</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="https://www.iconsdb.com/icons/preview/white/mobile-phone-8-xxl.png" >
+                     <div>
+                        <h1>Display</h1>
+                        <p>6.67 inches</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="https://www.iconsdb.com/icons/preview/white/full-battery-xxl.png" >
+                     <div>
+                        <h1>Battery</h1>
+                        <p>5020 mAh battery</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="controls">
+            <img src="arrow-down.png" id="upBtn">
+            <h3>Features</h3>
+            <img src="arrow-down.png" id="downBtn">
+        </div>
+        
+
 
     </div>
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+        var rotateValue = circle.style.transform;
+        var rotateSum;
 
+        upBtn.onclick =function()
+        {
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform =rotateSum;
+            rotateValue = rotateSum;
+        }
+
+        downBtn.onclick =function()
+        {
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+
+
+    </script>
 </body>
 </html>
